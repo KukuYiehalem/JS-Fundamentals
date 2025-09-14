@@ -1,7 +1,7 @@
 const args = process.argv.slice(2);
 const size = parseInt(args[0]);
 
-if (args[0] === undefined) {
+if (args[0] === undefined || isNaN(size)) {
     console.log("Missing size");
 } else if (size > 0) {
     let i = 0;
@@ -10,4 +10,5 @@ if (args[0] === undefined) {
         i++;
     }
 }
-// If size <= 0 or NaN, print nothing
+// If size <= 0, do nothing
+
